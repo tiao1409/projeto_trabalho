@@ -1,0 +1,34 @@
+<h1 class="mt-5 mb-5"> Motoristas</h1>
+<div>
+    <button class="btn btn-outline-primary btn-block" [routerLink]="['cadastro']">
+        <i class=" bi bi-plus "></i>
+        Adicionar
+    </button>
+</div>
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Nacionalidade</th>
+            <TH>Cidade</TH>
+            <th>Genero</th>
+            <th>Cpf</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let motorista of motoristas ">
+            <td>{{motorista.id}}</td>
+            <td>{{motorista.nome}}</td>
+            <td>{{motorista.nacionalidade}}</td>
+            <td>{{motorista.cidade}}</td>
+            <td>{{motorista.genero}}</td>
+            <td>{{motorista.cpf}}</td>
+            <td>
+                <button class="btn btn-outline-warning btn-sm mr-2" [routerLink]="['edicao', motorista.id]">Editar</button>
+                <button class="btn btn-outline-danger btn-sm " (click)="excluir(motorista) ">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

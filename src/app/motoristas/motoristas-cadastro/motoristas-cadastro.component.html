@@ -1,0 +1,40 @@
+<h1 class="mt-5 mb-4 text-center">Cadastro de Motoristas</h1>
+<hr />
+<form [formGroup]="motoristasForm" (ngSubmit)="salvar()" class="mt-4 mb-4">
+    <div class="form-group">
+        <label for="nome">Nome: </label>
+        <input id="nome" type="text" class='form-control' placeHolder="Nome do Motorista" formControlName="nome">
+    </div>
+    <div class="form-group">
+        <label for="nacionalidade">Nacionalidade: </label>
+        <input id="nacionalidade" type="text" class='form-control' placeHolder="Nacionalidade" formControlName="nacionalidade">
+    </div>
+    <div class="form-group">
+        <label for="cidade">Cidade: </label>
+        <input id="cidade" type="text" class='form-control' placeHolder="Cidade" formControlName="cidade">
+    </div>
+    <div class="form-group">
+        <label for="cpf">CPF: </label>
+        <input id="cpf" type="text" class='form-control' placeHolder="Cpf" formControlName="cpf">
+    </div>
+    <div class="form-group">
+        <label>Gênero</label><br>
+        <div class="btn-group btn-group-toggle" ngbRadioGroup formControlName="genero">
+            <label class="btn btn-outline-danger" ngbButtonLabel>
+                <input type="radio" value="FEMININO" ngbButton> Feminino
+            </label>
+            <label class="btn btn-outline-primary" ngbButtonLabel>
+                <input type="radio" value="MASCULINO" ngbButton> Masculino
+            </label>
+        </div>
+    </div>
+    <hr />
+    <div class="row text-center mt-4">
+        <div class="offset-3 col-3">
+            <button class="btn btn-primary btn-block" type="submit" [disabled]="!motoristasForm.valid">Salvar</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-primary btn-block" [routerLink]="['']">Cancelar</button>
+        </div>
+    </div>
+</form>
