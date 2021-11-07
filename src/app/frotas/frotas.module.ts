@@ -21,6 +21,9 @@ import { NgbButtonsModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     NgbButtonsModule,
+  ],
+  exports: [
+    FrotasComponent,
   ]
 })
 export class FrotasModule { }

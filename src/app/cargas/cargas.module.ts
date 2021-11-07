@@ -20,6 +20,9 @@ import { NgbButtonsModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     NgbButtonsModule,
+  ],
+  exports: [
+   CargasComponent,
   ]
 })
 export class CargasModule { }
