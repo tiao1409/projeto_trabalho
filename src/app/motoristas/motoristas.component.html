@@ -27,6 +27,8 @@
             <td>{{motorista.cpf}}</td>
             <td>
                 <button class="btn btn-outline-warning btn-sm mr-2" [routerLink]="['edicao', motorista.id]">Editar</button>
+            </td>
+            <td>
                 <button class="btn btn-outline-danger btn-sm " (click)="excluir(motorista) ">Excluir</button>
             </td>
         </tr>

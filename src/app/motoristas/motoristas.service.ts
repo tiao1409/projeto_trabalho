@@ -12,16 +12,23 @@ export class MotoristasService {
     private httpClient: HttpClient,
   ) { }
 
+  findById(id: number) {
+    return this.httpClient.get<Motorista>(`${this.API}/${id}`)
+  }
+
   findAll() {
-   return this.httpClient.get <Motorista[]>(this.API);
-    
+    return this.httpClient.get<Motorista[]>(this.API);
   }
 
   remove(id: number) {
     return this.httpClient.delete<void>(`${this.API}/${id}`)
   }
-  save( motorista: Motorista){
-    return this.httpClient.post<void>(this.API, motorista)
 
+  add(motorista: Motorista) {
+    return this.httpClient.post<void>(this.API, motorista);
+  }
+
+  update(id: number, motorista: Motorista) {
+    return this.httpClient.put<Motorista>(`${this.API}/${id}`, motorista)
   }
 }

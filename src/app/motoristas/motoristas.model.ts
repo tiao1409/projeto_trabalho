@@ -1,4 +1,3 @@
-import { GenerateOptions } from "rxjs/internal/observable/generate";
 
 export interface Motorista {
     id: number;

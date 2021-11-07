@@ -1,0 +1,39 @@
+<h1 class="mt-5 mb-5"> Cargas</h1>
+<div>
+    <button class="btn btn-outline-primary btn-block" [routerLink]="['cadastro']">
+        <i class=" bi bi-plus "></i>
+        Adicionar
+    </button>
+</div>
+<table class="table table-striped ">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nota Fiscal:</th>
+            <th>Estado:</th>
+            <TH>Municipio:</TH>
+            <th>Tipo:</th>
+            <th>Valor do Frete:</th>
+            <th>Peso:</th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let carga of cargas ">
+            <td>{{carga.id}}</td>
+            <td>{{carga.nf}}</td>
+            <td>{{carga.municipio}}</td>
+            <td>{{carga.estado}}</td>
+            <td>{{carga.tipo}}</td>
+            <td>{{carga.frete}}</td>
+            <td>{{carga.peso}}</td>
+            <td>
+                <button class="btn btn-outline-warning btn-sm mr-2" [routerLink]="['edicao', carga.id]">Editar</button>
+            </td>
+            <td>
+                <button class="btn btn-outline-danger btn-sm " (click)="excluir(carga) ">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

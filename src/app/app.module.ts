@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MotoristasModule } from './motoristas/motoristas.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FrotasComponent } from './frotas/frotas.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    //FrotasComponent
   ],
   imports: [
     BrowserModule,

@@ -9,34 +9,33 @@ import { MotoristasService } from './motoristas.service';
 })
 export class MotoristasComponent implements OnInit {
 
-  motoristas: Motorista[] = [];
+  motoristas: Motorista[];
 
-  constructor(
-    private motoristasService: MotoristasService
-
-  ) { }
-
+  constructor(private motoristasService: MotoristasService) {
+    this.motoristas = [];
+  }
   ngOnInit(): void {
-   this.listar;
+    this.motoristasService.findAll()
+      .subscribe((motoristas) => {
+        this.motoristas = motoristas;
+      })
   }
 
- 
 
-  excluir (motorista: Motorista){
-   const {id , nome} = motorista;
-   const resposta = confirm('Deseja realmente excluir o motorista ${id} - ${nome}´?');
-   if (resposta) {
-     this.motoristasService.remove(id).subscribe(() => this.listar());
-   }
+
+  excluir(motorista: Motorista) {
+    const { id, nome } = motorista;
+    const resposta = confirm(`Deseja excluir mesmo ${id} - ${nome}'?`);
+    if (resposta) {
+      this.motoristasService.remove(id).subscribe(() => this.listar());
+    }
 
   }
 
-  private listar(){
-    this.motoristasService
-    .findAll()
-    .subscribe((motoristas) => {
+  private listar() {
+    this.motoristasService.findAll().subscribe((motoristas) => {
       this.motoristas = motoristas;
-    });
+    })
 
   }
 

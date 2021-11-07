@@ -1,0 +1,33 @@
+<h1 class="mt-5 mb-4 text-center">Cadastro de Frotas</h1>
+<hr />
+<form [formGroup]="frotasForm" (ngSubmit)="salvar()" class="mt-4 mb-4">
+    <div class="form-group">
+        <label for="modelo">Modelo: </label>
+        <input id="modelo" type="text" class='form-control' placeHolder="modelo do Caminhão" formControlName="modelo">
+    </div>
+    <div class="form-group">
+        <label for="municipio">Municipio: </label>
+        <input id="municipio" type="text" class='form-control' placeHolder="municipio" formControlName="municipio">
+    </div>
+    <div class="form-group">
+        <label for="estado">Estado: </label>
+        <input id="estado" type="text" class='form-control' placeHolder="estado" formControlName="estado">
+    </div>
+    <div class="form-group">
+        <label for="tipo">Tipo: </label>
+        <input id="tipo" type="text" class='form-control' placeHolder="tipo" formControlName="tipo">
+    </div>
+    <div class="form-group">
+        <label for="placa">Placa: </label>
+        <input id="placa" type="text" class='form-control' placeHolder="placa" formControlName="placa">
+    </div>
+    <hr />
+    <div class="row text-center mt-4">
+        <div class="offset-3 col-3">
+            <button class="btn btn-primary btn-block" type="submit" [routerLink]="['/frotas']" [disabled]="!frotasForm.valid">Salvar</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-primary btn-block" [routerLink]="['/frotas']">Cancelar</button>
+        </div>
+    </div>
+</form>
