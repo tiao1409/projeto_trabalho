@@ -6,16 +6,27 @@
         <input id="nf" type="text" class='form-control' placeHolder="Nota Fiscal da Carga" formControlName="nf">
     </div>
     <div class="form-group">
+        <label for="tipo">Tipo: </label>
+        <input id="tipo" type="text" class='form-control' placeHolder="Tipo de Frete" formControlName="tipo">
+    </div>
+    <div class="form-group">
         <label for="municipio">Municipio: </label>
         <input id="municipio" type="text" class='form-control' placeHolder="municipio" formControlName="municipio">
     </div>
     <div class="form-group">
-        <label for="estado">Estado: </label>
-        <input id="estado" type="text" class='form-control' placeHolder="estado" formControlName="estado">
-    </div>
-    <div class="form-group">
-        <label for="tipo">Tipo: </label>
-        <input id="tipo" type="text" class='form-control' placeHolder="Tipo de Frete" formControlName="tipo">
+        <label for="estado">Estado:</label>
+        <select id="estado" class='form-control' placeHolder="estado" formControlName="estado">
+        <option>AL</option>
+        <option>CA</option>
+        <option>SP</option>
+        <option>SC</option>
+        <option>RJ</option>
+        <option>RS</option>
+        <option>MT</option>
+        <option>MG</option>
+        <option>CE</option>
+        <option>MA</option>
+        </select>
     </div>
     <div class="form-group">
         <label for="frete">Valor do Frete: </label>
@@ -30,7 +41,7 @@
         <div class="col-3">
             <button class="btn btn-primary btn-block" [routerLink]="['/cargas']">Dados Cadastrados</button>
         </div>
-        <div class="col-3">
+        <div class="offset-3 col-3">
             <button class="btn btn-primary btn-block" type="submit" [disabled]="!cargasForm.valid">Salvar</button>
         </div>
         <div class="col-3">

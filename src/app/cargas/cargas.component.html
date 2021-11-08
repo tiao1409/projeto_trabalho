@@ -1,12 +1,14 @@
+<link rel="styleshhet" href="cargas.component.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
 <h1 class="mt-5 mb-5"> Cargas</h1>
 <table class="table table-striped ">
     <thead>
         <tr>
             <th>ID</th>
             <th>Nota Fiscal:</th>
+            <th>Tipo:</th>
             <th>Estado:</th>
             <Th>Municipio:</Th>
-            <th>Tipo:</th>
             <th>Valor do Frete:</th>
             <th>Peso:</th>
             <th></th>
@@ -16,16 +18,16 @@
         <tr *ngFor="let carga of cargas ">
             <td>{{carga.id}}</td>
             <td>{{carga.nf}}</td>
-            <td>{{carga.municipio}}</td>
-            <td>{{carga.estado}}</td>
             <td>{{carga.tipo}}</td>
+            <td>{{carga.estado}}</td>
+            <td>{{carga.municipio}}</td>
             <td>{{carga.frete}}</td>
             <td>{{carga.peso}}</td>
             <td>
-                <button class="btn btn-outline-warning btn-sm mr-2" [routerLink]="['edicao', carga.id]">Editar</button>
+                <button class="button-warning pure-button" [routerLink]="['edicao', carga.id]">Editar</button>
             </td>
             <td>
-                <button class="btn btn-outline-danger btn-sm " (click)="excluir(carga)">Excluir</button>
+                <button class="button-error pure-button" (click)="excluir(carga)">Excluir</button>
             </td>
         </tr>
     </tbody>
@@ -38,3 +40,4 @@
         <button class="btn btn-primary btn-block" [routerLink]="['/menu-principal']">Menu Principal</button>
     </div>
 </div>
+<div>
