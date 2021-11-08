@@ -23,8 +23,11 @@
     </div>
     <hr />
     <div class="row text-center mt-4">
+        <div class="col-3">
+            <button class="btn btn-primary btn-block" [routerLink]="['/frotas']">Dados Cadastrados</button>
+        </div>
         <div class="offset-3 col-3">
-            <button class="btn btn-primary btn-block" type="submit" [routerLink]="['/frotas']" [disabled]="!frotasForm.valid">Salvar</button>
+            <button class="btn btn-primary btn-block" type="submit" [disabled]="!frotasForm.valid">Salvar</button>
         </div>
         <div class="col-3">
             <button class="btn btn-primary btn-block" [routerLink]="['/frotas']">Cancelar</button>

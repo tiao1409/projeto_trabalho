@@ -30,8 +30,11 @@
     </div>
     <hr />
     <div class="row text-center mt-4">
-        <div class="offset-3 col-3">
-            <button class="btn btn-primary btn-block" type="submit" [routerLink]="['/motoristas']" [disabled]="!motoristasForm.valid">Salvar</button>
+        <div class="col-3">
+            <button class="btn btn-primary btn-block" [routerLink]="['/motoristas']">Dados Cadastrados</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-primary btn-block" type="submit" [disabled]="!motoristasForm.valid">Salvar</button>
         </div>
         <div class="col-3">
             <button class="btn btn-primary btn-block" [routerLink]="['/motoristas']">Cancelar</button>

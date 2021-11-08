@@ -1,21 +1,14 @@
 <h1 class="mt-5 mb-5"> Cargas</h1>
-<div>
-    <button class="btn btn-outline-primary btn-block" [routerLink]="['cadastro']">
-        <i class=" bi bi-plus "></i>
-        Adicionar
-    </button>
-</div>
 <table class="table table-striped ">
     <thead>
         <tr>
             <th>ID</th>
             <th>Nota Fiscal:</th>
             <th>Estado:</th>
-            <TH>Municipio:</TH>
+            <Th>Municipio:</Th>
             <th>Tipo:</th>
             <th>Valor do Frete:</th>
             <th>Peso:</th>
-
             <th></th>
         </tr>
     </thead>
@@ -32,8 +25,16 @@
                 <button class="btn btn-outline-warning btn-sm mr-2" [routerLink]="['edicao', carga.id]">Editar</button>
             </td>
             <td>
-                <button class="btn btn-outline-danger btn-sm " (click)="excluir(carga) ">Excluir</button>
+                <button class="btn btn-outline-danger btn-sm " (click)="excluir(carga)">Excluir</button>
             </td>
         </tr>
     </tbody>
 </table>
+<div class="row text-center mt-4">
+    <div class="col-3">
+        <button class="btn btn-primary btn-block" [routerLink]="['/cargas/cadastro']">Cadastrar Novo</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary btn-block" [routerLink]="['/menu-principal']">Menu Principal</button>
+    </div>
+</div>

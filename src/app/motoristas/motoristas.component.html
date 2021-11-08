@@ -1,11 +1,6 @@
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
 <h1 class="mt-5 mb-5"> Motoristas</h1>
-<div>
-    <button class="btn btn-outline-primary btn-block" [routerLink]="['cadastro']">
-        <i class=" bi bi-plus "></i>
-        Adicionar
-    </button>
-</div>
-<table class="table table-striped ">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>ID</th>
@@ -34,3 +29,11 @@
         </tr>
     </tbody>
 </table>
+<div class="row text-center mt-4">
+    <div class="col-3">
+        <button class="btn btn-primary btn-block" [routerLink]="['/menu-principal']">Menu Principal</button>
+    </div>
+    <div class="col-3">
+        <button class="btn btn-primary btn-block" [routerLink]="['/motoristas/cadastro']">Cadastrar</button>
+    </div>
+</div>
